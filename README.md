@@ -1,11 +1,87 @@
-• Bir veya daha fazla filozof yuvarlak bir masanın etrafında oturur ve masanın ortasında büyük bir tabak spagetti bulunur.
-</br> • Filozoflar sırayla yemek yer, düşünür veya uyurlar. Yemek yerken düşünmezler veya uyumazlar; düşünürken yemek yemezler veya uyumazlar; uyurken ise yemek yemezler veya düşünmezler.
-</br> • Masada filozof sayısı kadar çatal vardır.
-</br> • Spagettiyi yalnızca bir çatal ile yemek zor olduğundan, bir filozof yemek yemek için hem sağındaki hem de solundaki çatalları alır, bir çatalı her iki elinde tutar.
-</br> • Filozof yemek yediğinde, çatalları masaya geri koyar ve uyumaya başlar. Uyandıktan sonra tekrar düşünmeye başlar. Simülasyon, bir filozof açlıktan ölünceye kadar devam eder.
-</br> • Her filozofun yemek yemesi gerekir ve aç kalmamalıdır.
-</br> • Filozoflar birbirleriyle konuşmazlar.
-</br> • Filozoflar diğer filozofların ölmek üzere olduğunu bilmezler.
-</br> • Filozofların ölmekten kaçınmaları gerektiğini belirtmeye gerek yok!
+# 🍝 Dining-Philosophers
+
+> Dining Philosophers problemi üzerine geliştirilen, eşzamanlılık (concurrency) ve thread yönetimini ele alan bir proje.
+
+---
+
+## 🚀 Proje Hakkında
+
+Klasik "Dining Philosophers" problemini çözmeyi amaçlayan bir projedir. Amaç:
+
+* 🧠 Deadlock önlemek
+* ⚡ Thread senkronizasyonu sağlamak
+* 🍴 Filosofların doğru şekilde yemek yemesini yönetmek
+
+Her filozof:
+
+* Düşünür
+* Yemek yer
+* Uyur
+
+---
+
+## 🧱 Kullanılan Teknolojiler
+
+* C / C++98
+* Threads (pthread)
+* Mutex
+* Concurrency & synchronization
+
+---
+
+## ⚙️ Özellikler
+
+✔️ Thread bazlı yapı
+✔️ Mutex ile kaynak yönetimi
+✔️ Deadlock prevention
+✔️ Starvation kontrolü
+✔️ Gerçek zamanlı loglama
+
+---
+
+## 🧠 Problem Tanımı
+
+Filozoflar yuvarlak bir masada oturur ve:
+
+* Her iki filozof arasında 1 adet çatal bulunur
+* Yemek yemek için 2 çatal gerekir
+
+Amaç:
+
+* Hiçbir filozof aç kalmamalı
+* Sistem deadlock’a girmemeli
+
+---
+
+## 🧩 Kullanılan Algoritma
+
+Proje şu mantık üzerine kuruludur:
+
+* Her filozof bir thread olarak çalışır
+* Forklar mutex ile korunur
+* Filozoflar belirli bir sırayla fork almaya çalışır
+
+---
+
+## 📊 Durumlar
+
+Her filozofun durumu:
+
+* 🧠 THINKING
+* 🍴 EATING
+* 😴 SLEEPING
+* 💀 DIED
+
+---
+
+## 🧠 Öğrendiklerim
+
+* Thread yönetimi
+* Mutex kullanımı
+* Deadlock ve race condition kavramları
+* Senkronizasyon teknikleri
+* Gerçek zamanlı sistem davranışı
+
+---
 
 ![An_illustration_of_the_dining_philosophers_problem](https://github.com/user-attachments/assets/c60a136c-432c-4c33-ad3e-11bbe9535700)
